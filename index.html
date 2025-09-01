@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 21 to 30</title>
+</head>
+
+<body>
+
+    <script>
+        // This file is for practicing concepts from chapters 21 to 30.
+        // You can uncomment each section one by one to test the code.
+        // Remember to save your work and have fun!
+
+        // --- Chapters 21-23: If statements and comparison operators ---
+
+        // Let's create a variable for a score.
+        let myScore = 85;
+        let passingScore = 75;
+
+        // Here's a simple if/else if/else statement to check the score.
+        // The `if` statement checks the first condition.
+        // The `else if` checks a second condition only if the first is false.
+        // The `else` runs if all previous conditions are false.
+        if (myScore >= 90) {
+            console.log("You got an A! Great job!");
+        } else if (myScore >= 80 && myScore < 90) {
+            console.log("You got a B! Very good!");
+        } else if (myScore >= passingScore) {
+            console.log("You passed. You can do better next time.");
+        } else {
+            console.log("You didn't pass. Study more.");
+        }
+
+        // --- Chapters 24-28: String manipulation ---
+
+        // We'll use this string to practice finding characters and segments.
+        let myQuote = "To be or not to be, that is the question.";
+
+        // Chapter 24: Finding a character at a specific location.
+        let firstChar = myQuote.charAt(0);
+        console.log(`The character at index 0 is: ${firstChar}`);
+
+        // Chapter 25: Finding a segment (part) of a string.
+        let isItInThere = myQuote.includes("to be");
+        console.log(`Does the string contain "to be"? ${isItInThere}`);
+
+        // Chapter 26: Finding the index (location) of the first occurrence of a character.
+        let firstIndexOfB = myQuote.indexOf("b");
+        console.log(`The first 'b' is at index: ${firstIndexOfB}`);
+
+        // Chapter 27: Finding the index (location) of the last occurrence of a character.
+        let lastIndexOfB = myQuote.lastIndexOf("b");
+        console.log(`The last 'b' is at index: ${lastIndexOfB}`);
+
+        // Chapter 28: Extracting a segment using the .slice() method.
+        let slicedString = myQuote.slice(3, 7); // This will get "be o"
+        console.log(`A part of the string is: ${slicedString}`);
+
+        // --- Chapter 29: Converting strings to numbers and vice versa ---
+
+        // Let's work with a string that contains a number.
+        let stringNumber = "42";
+
+        // Use parseInt() to convert a string to an integer (a whole number).
+        let numberFromInt = parseInt(stringNumber);
+        console.log(`The string "${stringNumber}" is now the number: ${numberFromInt}`);
+        console.log(`The type is now: ${typeof numberFromInt}`);
+
+        // Now, convert the number back to a string using .toString().
+        let newStringFromNumber = numberFromInt.toString();
+        console.log(`The number is now the string: "${newStringFromNumber}"`);
+        console.log(`The type is now: ${typeof newStringFromNumber}`);
+
+        // --- Chapter 30: Controlling the length of decimals ---
+
+        // We'll use a number with a long decimal part.
+        let pi = 3.1415926535;
+
+        // Use .toFixed() to round the number to a specific number of decimal places.
+        let piFixed = pi.toFixed(2); // Rounds to 2 decimal places.
+        console.log(`Pi rounded to 2 decimal places is: ${piFixed}`);
+
+        // It's important to know that toFixed() returns a string!
+        console.log(`After toFixed(), the type is: ${typeof piFixed}`);
+
+        // To do math with it again, you would need to convert it back to a number.
+        let piNumber = parseFloat(piFixed);
+        console.log(`Pi as a number again: ${piNumber}`);
+        console.log(`And its type is: ${typeof piNumber}`);
+
+    </script>
+</body>
+
+</html>
